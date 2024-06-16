@@ -1,8 +1,6 @@
 FROM php:8.1-fpm-alpine
 
-RUN apk add --no-cache nginx wget \
-    && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd zip
+RUN apk add --no-cache nginx wget
 
 RUN mkdir -p /run/nginx
 
